@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# .make_links.sh
+# This script runs make_links.sh script within each submodule
 ############################
 
 ########## Variables
@@ -21,12 +21,14 @@ modules="dot-configs scripts shellrc"    # list of files/folders to symlink in h
 #cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-#for file in $files; do
-	#echo " $file:"
-	#if [[ -f "$HOME/$file" ]]; then
-		#echo "   backing up old file"
-		#mv $HOME/$file $olddir
-	#fi
-	#echo "   creating symlink"
-	#ln -sf $dir/$file $HOME/$file
-#done
+for mod in $modules; do
+	echo " $mod:"
+	if [[ -d "$mod" ]]; then
+		cd "$mod"
+		. make_links.sh
+		cd ..
+	else
+		echo "directory not found! stopping"
+		exit 1;
+	fi
+done
