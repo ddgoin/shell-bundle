@@ -13,7 +13,7 @@ modules="dot-configs scripts shellrc"    # list of files/folders to symlink in h
 ##########
 
 `git submodule foreach git pull origin master`
-`git submodule update --init --recursive`
+#`git submodule update --init --recursive`
 
 # change to the dotfiles directory
 #echo "Changing to the $dir directory"
