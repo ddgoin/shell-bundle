@@ -1,4 +1,3 @@
-" testing git subtrees
 " COLORS!
 syntax enable
 syntax on
