@@ -1,0 +1,9 @@
+[submodule "dot-configs"]
+	path = dot-configs
+	url = ./dot-configs
+[submodule "scripts"]
+	path = scripts
+	url = ./scripts
+[submodule "shellrc"]
+	path = shellrc
+	url = ./shellrc
