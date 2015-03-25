@@ -1,0 +1,3 @@
+[submodule "dot-configs"]
+	path = dot-configs
+	url = https://github.com/ddgoin/dot-configs.git
