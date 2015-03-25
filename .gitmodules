@@ -1,0 +1,9 @@
+[submodule "shellrc"]
+	path = shellrc
+	url = https://github.com/ddgoin/shellrc.git
+[submodule "dot-configs"]
+	path = dot-configs
+	url = https://github.com/ddgoin/dot-configs.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/ddgoin/scripts.git
