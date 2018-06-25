@@ -8,7 +8,7 @@
 
 timestamp=$(date +%F_%T)
 dir=$(pwd)
-modules="dot-configs scripts shellrc"    # list of files/folders to symlink in homedir
+modules="dot-configs scripts"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -25,7 +25,7 @@ for mod in $modules; do
 	echo " $mod:"
 	if [[ -d "$mod" ]]; then
 		cd "$mod"
-		. make_links.sh
+		. make_copies.sh
 		cd ..
 	else
 		echo "directory not found! stopping"
